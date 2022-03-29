@@ -81,7 +81,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - run: |
-        $container = New-Pester-Container `
+        $container = New-PesterContainer `
           -Path 'deploy/Website.Tests.ps1' `
           -Data ${ HostName = '${{ needs.deploy.outputs.appServiceAppHostName }}' }
 
